@@ -121,6 +121,7 @@
 		BBA8A3DF19F7515B009D0A13 /* Window_Quit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BBA8A3DD19F7515B009D0A13 /* Window_Quit.cpp */; };
 		BBA8A3E319F758FD009D0A13 /* location in Resources */ = {isa = PBXBuildFile; fileRef = BBA8A3E219F758FD009D0A13 /* location */; };
 		BBA8A3E819F75A7F009D0A13 /* Location.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BBA8A3E619F75A7F009D0A13 /* Location.cpp */; };
+		BBDD602119F7AA5500AF8031 /* Window_Tips.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BBDD601F19F7AA5500AF8031 /* Window_Tips.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -436,6 +437,8 @@
 		BBA8A3E219F758FD009D0A13 /* location */ = {isa = PBXFileReference; lastKnownFileType = folder; path = location; sourceTree = "<group>"; };
 		BBA8A3E619F75A7F009D0A13 /* Location.cpp */ = {isa = PBXFileReference; fileEncoding = 2147483673; lastKnownFileType = sourcecode.cpp.cpp; name = Location.cpp; path = ../Classes/Location.cpp; sourceTree = "<group>"; };
 		BBA8A3E719F75A7F009D0A13 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 2147483673; lastKnownFileType = sourcecode.c.h; name = Location.h; path = ../Classes/Location.h; sourceTree = "<group>"; };
+		BBDD601F19F7AA5500AF8031 /* Window_Tips.cpp */ = {isa = PBXFileReference; fileEncoding = 2147483673; lastKnownFileType = sourcecode.cpp.cpp; name = Window_Tips.cpp; path = ../Classes/Window_Tips.cpp; sourceTree = "<group>"; };
+		BBDD602019F7AA5500AF8031 /* Window_Tips.h */ = {isa = PBXFileReference; fileEncoding = 2147483673; lastKnownFileType = sourcecode.c.h; name = Window_Tips.h; path = ../Classes/Window_Tips.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -692,6 +695,8 @@
 				BB0F8F1519F6008A000A6EA9 /* Window_Weapon.h */,
 				BBA8A3DD19F7515B009D0A13 /* Window_Quit.cpp */,
 				BBA8A3DE19F7515B009D0A13 /* Window_Quit.h */,
+				BBDD601F19F7AA5500AF8031 /* Window_Tips.cpp */,
+				BBDD602019F7AA5500AF8031 /* Window_Tips.h */,
 			);
 			name = Windows;
 			sourceTree = "<group>";
@@ -1100,6 +1105,7 @@
 				BBA8A3DF19F7515B009D0A13 /* Window_Quit.cpp in Sources */,
 				BB0F8EDC19EF984F000A6EA9 /* LineContainer.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				BBDD602119F7AA5500AF8031 /* Window_Tips.cpp in Sources */,
 				BB0F8F1219F51966000A6EA9 /* Window_Shop.cpp in Sources */,
 				BB0F8ED419EF984F000A6EA9 /* Hero.cpp in Sources */,
 				BB0F8EDE19EF984F000A6EA9 /* MenuScene.cpp in Sources */,

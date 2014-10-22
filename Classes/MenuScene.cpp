@@ -10,6 +10,7 @@
 #include "MainScene.h"
 #include "Window_Setting.h"
 #include "Window_Quit.h"
+#include "Window_Tips.h"
 
 
 void MenuScene::onEnter(){

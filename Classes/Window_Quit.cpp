@@ -14,12 +14,22 @@ void Window_Quit::init(void *data){
     m_tips = GUIReader::getInstance()->widgetFromJsonFile("ccs/Window_Quit.json");
     
     Node* bg = m_tips->getChildByName("bg");
-    Label* m_label = Label::createWithSystemFont(loc("quit_game"), "", 27);
-    m_label->setWidth(320);
-    m_label->setAnchorPoint(Point::ANCHOR_TOP_LEFT);
-    m_label->setPosition(Point(40,410));
-    m_label->setTextColor(Color4B(200,200,200,255));
-    bg->addChild(m_label);
+//    Label* m_label = Label::createWithSystemFont(loc("quit_game"), "", 27);
+//    m_label->setWidth(320);
+//    m_label->setAnchorPoint(Point::ANCHOR_TOP_LEFT);
+//    m_label->setPosition(Point(40,410));
+//    m_label->setTextColor(Color4B(200,200,200,255));
+//    bg->addChild(m_label);
+    RichText* _richText =  RichText::create();
+    _richText->ignoreContentAdaptWithSize(false);
+    _richText->setContentSize(Size(320,288));
+    RichElementText* re1 = RichElementText::create(1, Color3B::YELLOW, 255, loc("quit_game"), "", 27);
+    RichElementText* re2 = RichElementText::create(1, Color3B::YELLOW, 255, loc("test"), "", 27);
+    _richText->pushBackElement(re1);
+    _richText->pushBackElement(re2);
+    _richText->setAnchorPoint(Point::ANCHOR_MIDDLE_LEFT);
+    bg->addChild(_richText);
+    //_richText->setPosition(Point(34,123));
     
     m_btns.push_back(ui::Helper::seekWidgetByName(m_tips, "btn_ok"));
     m_btns.push_back(ui::Helper::seekWidgetByName(m_tips, "btn_cancel"));

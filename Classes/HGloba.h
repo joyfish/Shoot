@@ -39,6 +39,13 @@ public:
         this->battle_id = battle_id;
     }
 };
+class WindowTipsParam{
+public:
+    std::string key;
+    WindowTipsParam(std::string key){
+        this->key = key;
+    }
+};
 
 
 

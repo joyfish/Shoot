@@ -12,6 +12,7 @@
 #include "Window_Shop.h"
 #include "Window_Weapon.h"
 
+
 void MainScene::onEnter(){
     HScene::onEnter();
     m_bg = GUIReader::getInstance()->widgetFromJsonFile("ccs/Main.json");

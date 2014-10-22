@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="20" height="20" tilewidth="55" tileheight="55">
+ <tileset firstgid="1" name="map" tilewidth="55" tileheight="55">
+  <image source="map.png" width="165" height="55"/>
+ </tileset>
+ <layer name="下层" width="20" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjZGBgYBxmmInKepjIMJOQenLdyISFT477sJlBqfuo7d9RPIpH8eDGADoDAaI=
+  </data>
+ </layer>
+ <objectgroup name="对象层 1" width="20" height="20"/>
+ <layer name="上层" width="20" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgagGmImEsrd46CUTAKRsFgAwAl0AAH
+  </data>
+ </layer>
+</map>

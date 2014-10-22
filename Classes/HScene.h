@@ -44,9 +44,9 @@ public:
     
     vector<std::string> getTextureNames();
     
-    //é¢„åŠ è½½çš„èµ„æº é‡å†™ä»–æ¥æ·»åŠ èµ„æº
+    //Ô¤¼ÓÔØµÄ×ÊÔ´ ÖØĞ´ËûÀ´Ìí¼Ó×ÊÔ´
     virtual void loadResource();
-    //Sceneé”€æ¯æ—¶å€™è°ƒç”¨é‡Šæ”¾èµ„æº
+    //SceneÏú»ÙÊ±ºòµ÷ÓÃÊÍ·Å×ÊÔ´
     virtual void ReleaseResource();
     
     void changeScene(M_SCENE m_scene,void* data = nullptr);
@@ -59,10 +59,10 @@ public:
 protected:
     void addTextureName(std::string fileName);
     void releaseTexture(const char* fileName);
-    //è®°å½•å¼€å¯Scene ä¼ é€’è¿‡æ¥çš„å‚æ•°
+    //¼ÇÂ¼¿ªÆôScene ´«µİ¹ıÀ´µÄ²ÎÊı
     void* m_data;
     
-    Node* scene_bg;//ç•Œé¢çš„çª—å£æ·»åŠ åˆ°è¿™å±‚ windowç›´æ¥æ·»åŠ åˆ°HScene;
+    Node* scene_bg;//½çÃæµÄ´°¿ÚÌí¼Óµ½Õâ²ã windowÖ±½ÓÌí¼Óµ½HScene;
     HWindowsHelper* m_helper;
     
 private:
@@ -95,10 +95,10 @@ public:
 private:
     void loadNext(Texture2D* texture);
     
-    Scene* nextScene;//loadingå®Œæˆå¼€å¯çš„Scene
-    vector<std::string> images_toload;//å‚¨å­˜éœ€è¦é¢„åŠ è½½çš„å›¾ç‰‡å
-    int loaded;//åŠ è½½å®Œçš„å›¾ç‰‡æ•°é‡
-    long total;//å›¾ç‰‡æ€»æ•°é‡
+    Scene* nextScene;//loadingÍê³É¿ªÆôµÄScene
+    vector<std::string> images_toload;//´¢´æĞèÒªÔ¤¼ÓÔØµÄÍ¼Æ¬Ãû
+    int loaded;//¼ÓÔØÍêµÄÍ¼Æ¬ÊıÁ¿
+    long total;//Í¼Æ¬×ÜÊıÁ¿
 };
 
 

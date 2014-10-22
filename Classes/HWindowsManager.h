@@ -58,8 +58,8 @@ protected:
     ~HWindowsManager();
     
 private:
-    Vector<IHWindow*> m_windows;//寮�鍚殑HWindow
-    Vector<IHWindow*> m_toclose;//寰呭叧闂殑HWindow
+    Vector<IHWindow*> m_windows;//开启的HWindow
+    Vector<IHWindow*> m_toclose;//待关闭的HWindow
     static HWindowsManager* m_instance;
 };
 

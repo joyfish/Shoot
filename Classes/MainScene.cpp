@@ -280,7 +280,7 @@ void MainScene::onMercentary(){
 void MainScene::updateBattleAndMercentary(){
     ImageView* btn_battle = dynamic_cast<ImageView*>(m_btns[BTN_BATTLE]);
     ImageView* btn_Mercentary = dynamic_cast<ImageView*>(m_btns[BTN_MERCENTARY]);
-    if (m_battle_type == 0) {//æˆ˜å½¹
+    if (m_battle_type == 0) {//Õ½ÒÛ
         btn_battle->loadTexture("ccs/main/btn_battle_selected.png");
         btn_Mercentary->loadTexture("ccs/main/btn_mercentary_unselected.png");
         btn_battle->setTouchEnabled(false);

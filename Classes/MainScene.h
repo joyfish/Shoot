@@ -50,25 +50,25 @@ private:
     
     void onStartClick();
     
-    void onWeapon();//æ­¦å™¨
-    void onAbility();//èƒ½åŠ›
-    void onChallenge();//æŒ‘æˆ˜
-    void onShop();//å•†åŸ
+    void onWeapon();//ÎäÆ÷
+    void onAbility();//ÄÜÁ¦
+    void onChallenge();//ÌôÕ½
+    void onShop();//ÉÌ³Ç
     
-    void onBackToMain();//ä»æˆ˜å½¹é€€åˆ°å¤§å…
-    void onBack();//ä»å¤§å…é€€åˆ°å°é¢
+    void onBackToMain();//´ÓÕ½ÒÛÍËµ½´óÌü
+    void onBack();//´Ó´óÌüÍËµ½·âÃæ
     
-    void onBattle();//æˆ˜å½¹
-    void onMercentary();//ä½£å…µ
+    void onBattle();//Õ½ÒÛ
+    void onMercentary();//Ó¶±ø
     void updateBattleAndMercentary();
     
-    void onCoinAdd();//ä¹°é‡‘å¸
-    void onMoneyAdd();//ä¹°é’»çŸ³
+    void onCoinAdd();//Âò½ğ±Ò
+    void onMoneyAdd();//Âò×êÊ¯
     
     void updateCoin(EventCustom* event);
     void updateMoney(EventCustom* event);
     
-    void StartGame();//å¼€å§‹æ¸¸æˆ
+    void StartGame();//¿ªÊ¼ÓÎÏ·
     
     enum BTNS{
         BTN_START = 0,
@@ -101,7 +101,7 @@ private:
     TextAtlas* num_coin;
     TextAtlas* num_money;
     
-    int m_battle_type;//0-æˆ˜å½¹ 1-ä½£å…µ
+    int m_battle_type;//0-Õ½ÒÛ 1-Ó¶±ø
     Window_Battle* m_battle_window;
     
     EventListenerCustom* _coin_listener;

@@ -34,7 +34,7 @@ __Btn__->runAction(Sequence::create(ScaleTo::create(0.1f, 1.2f), ScaleTo::create
 //Params
 class WindowBattleParam{
 public:
-    int battle_id;//0-ÊàòÂΩπ 1-‰Ω£ÂÖµ
+    int battle_id;//0-’Ω“€ 1-”∂±¯
     WindowBattleParam(int battle_id){
         this->battle_id = battle_id;
     }
@@ -52,7 +52,7 @@ public:
     static bool getBoolForKey(const char* pKey,bool b);
     static void setBoolForKey(const char* pKey,bool value);
     
-    /////////////////////////////Â£∞Èü≥
+    /////////////////////////////…˘“Ù
     
     static bool isBackGroundMusicOn();
     
@@ -68,7 +68,7 @@ public:
     
     static void playBackGroundMusic(const char* path);
 
-    /////////Ë¥ßÂ∏Å
+    /////////ªı±“
     
     static void setCoin(int coin);
     

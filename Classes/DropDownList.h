@@ -28,7 +28,7 @@ namespace CustomDropDownListBox
 #define DROPDOWNLIST_SELECTED_COLOR3     Color3B(200, 200, 200)
 #define DROPDOWNLIST_HIGHLIGHT_COLOR3    Color3B(0, 0, 255)
     
-#define DROPDOWNLIST_MAX_H 15
+#define DROPDOWNLIST_MAX_H 7
     
     
     class DropDownList : public Layer

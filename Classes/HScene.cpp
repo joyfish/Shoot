@@ -87,7 +87,7 @@ void LoadingScene::onExit(){
 }
 
 void LoadingScene::drawUI(){
-    //缁樺埗鍔犺浇鐣岄潰
+    //绘制加载界面
     Widget* loading_bg =  GUIReader::getInstance()->widgetFromJsonFile("ccs/Loading.json");
     if (loading_bg) {
         this->addChild(loading_bg);

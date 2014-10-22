@@ -155,26 +155,26 @@ bool GameLayerTest::init(){
         };
         _controllerlayer->addChild(joystick,10);//Ò¡¸ËÌí¼Óµ½layerÖÐ
         
-        Sprite *spJs1=Sprite::create("joystick.png");//Ò¡¸Ë
-        Sprite *spJsBG1=Sprite::create("joystick_bg.png");//Ò¡¸Ë±³¾°
-        CcJoystick *joystick1=CcJoystick::CcJoystickWithCenter(Point(_pRight-130.0f,_pBottom+130.0f),90.0f ,spJs1 ,spJsBG1,false);//´´½¨Ò¡¸Ë
-        CC_BREAK_IF(!joystick);
-        joystick1->onDirectionChanged = [&](Point dir){
-            if (dir!=Point::ZERO) {
-                _hero->dir(dir);
-            }
-            
-            if (_bulletDir == Point::ZERO) {
-                _hero->startFire();
-            }
-            if (dir == Point::ZERO) {
-                _hero->endFire();
-            }
-            
-            
-            _bulletDir = dir;
-        };
-        _controllerlayer->addChild(joystick1,10);//Ò¡¸ËÌí¼Óµ½layerÖÐ
+//        Sprite *spJs1=Sprite::create("joystick.png");//Ò¡¸Ë
+//        Sprite *spJsBG1=Sprite::create("joystick_bg.png");//Ò¡¸Ë±³¾°
+//        CcJoystick *joystick1=CcJoystick::CcJoystickWithCenter(Point(_pRight-130.0f,_pBottom+130.0f),90.0f ,spJs1 ,spJsBG1,false);//´´½¨Ò¡¸Ë
+//        CC_BREAK_IF(!joystick);
+//        joystick1->onDirectionChanged = [&](Point dir){
+//            if (dir!=Point::ZERO) {
+//                _hero->dir(dir);
+//            }
+//            
+//            if (_bulletDir == Point::ZERO) {
+//                _hero->startFire();
+//            }
+//            if (dir == Point::ZERO) {
+//                _hero->endFire();
+//            }
+//            
+//            
+//            _bulletDir = dir;
+//        };
+//        _controllerlayer->addChild(joystick1,10);//Ò¡¸ËÌí¼Óµ½layerÖÐ
         
         auto dispatcher = Director::getInstance()->getEventDispatcher();
     
@@ -283,14 +283,14 @@ void GameLayerTest::update(float dt){
 //    if (_animation) {
 //        _animation->move(_jsDir*100);
 //    }
-//    if (_istouched) {
-////        if (_animation) {
-////            _animation->dir(_touchPoint);
-////        }
-//        if (_hero) {
-//            _hero->dir(_touchPoint-_hero->getPosition());
+    if (_istouched) {
+//        if (_animation) {
+//            _animation->dir(_touchPoint);
 //        }
-//    }
+        if (_hero) {
+            _hero->dir(_touchPoint-_hero->getPosition());
+        }
+    }
     
    
     

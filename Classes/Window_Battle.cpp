@@ -19,9 +19,9 @@ void Window_Battle::init(void *data){
     m_tips = GUIReader::getInstance()->widgetFromJsonFile("ccs/Window_Battle.json");
     
     ImageView* title_label = dynamic_cast<ImageView*>(ui::Helper::seekWidgetByName(m_tips, "title_label"));
-    if (m_battle_type == 0) {//æˆ˜å½¹
+    if (m_battle_type == 0) {//Õ½ÒÛ
         title_label->loadTexture("ccs/stage/label_battle.png");
-    }else if(m_battle_type == 1){//ä½£å…µ
+    }else if(m_battle_type == 1){//Ó¶±ø
         title_label->loadTexture("ccs/stage/label_mercentary.png");
     }
     

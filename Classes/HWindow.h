@@ -20,15 +20,15 @@ using namespace std;
 using namespace ui;
 
 
-//ä½¿ç”¨æ³¨æ„ï¼š
-//1 ç»§æ‰¿ HWindow æ— ç‰¹æ®Šéœ€è¦çš„è¯ç”¨WINDOW_SHOW(__T__) æˆ–è€… WINDOW_SINGTON_SHOW(__T__)(éœ€è¦è‡ªå·±å®šä¹‰static __T__* instance;) é‡å†™è‡ªå®šä¹‰é™æ€show(Node* node)æ–¹æ³•
-//2 åœ¨initç¼–å†™ç•Œé¢åˆå§‹åŒ–å†…å®¹
-//3 ç»™m_tipsèµ‹å€¼ï¼Œå®ƒæ˜¯åŠ è½½JsonèŽ·å¾—çš„ç•Œé¢æ ¹Layout(æ³¨ï¼šå®ƒçš„å­é›†å¿…é¡»å‘½åç»™"bg"ï¼Œå®ƒæ˜¯å¼¹å‡ºç•Œé¢çš„å®žé™…èƒŒæ™¯)
-//4 è°ƒç”¨closeWindowå…³é—­ç•Œé¢
-//5 åœ¨ä»£ç ä¸­ä½¿ç”¨__T__::show(node,data)å¼€å¯ç•Œé¢
+//Ê¹ÓÃ×¢Òâ£º
+//1 ¼Ì³Ð HWindow ÎÞÌØÊâÐèÒªµÄ»°ÓÃWINDOW_SHOW(__T__) »òÕß WINDOW_SINGTON_SHOW(__T__)(ÐèÒª×Ô¼º¶¨Òåstatic __T__* instance;) ÖØÐ´×Ô¶¨Òå¾²Ì¬show(Node* node)·½·¨
+//2 ÔÚinit±àÐ´½çÃæ³õÊ¼»¯ÄÚÈÝ
+//3 ¸øm_tips¸³Öµ£¬ËüÊÇ¼ÓÔØJson»ñµÃµÄ½çÃæ¸ùLayout(×¢£ºËüµÄ×Ó¼¯±ØÐëÃüÃû¸ø"bg"£¬ËüÊÇµ¯³ö½çÃæµÄÊµ¼Ê±³¾°)
+//4 µ÷ÓÃcloseWindow¹Ø±Õ½çÃæ
+//5 ÔÚ´úÂëÖÐÊ¹ÓÃ__T__::show(node,data)¿ªÆô½çÃæ
 
 
-//å¼¹å‡ºé€šç”¨çª—å£å£°æ˜Ž
+//µ¯³öÍ¨ÓÃ´°¿ÚÉùÃ÷
 #define WINDOW_SHOW(__T__) \
 static __T__* show(Node* node,void* data=NULL)\
 { \
@@ -40,7 +40,7 @@ return instance;\
 }\
 void init(void* data);\
 
-//å¼¹å‡ºå•åˆ—çª—å£å£°æ˜Ž
+//µ¯³öµ¥ÁÐ´°¿ÚÉùÃ÷
 #define WINDOW_SINGTON_SHOW(__T__) \
 static __T__* show(Node* node,void* data=nullptr) \
 { \
@@ -73,14 +73,14 @@ enum WINDOW_ANIM{
 
 class HWindow :public IHWindow{
 public:
-    function<void()> onWindowIn;//æ·»åŠ ç•Œé¢è‡ªåŠ¨è¿›å…¥ä¹‹åŽçš„å›žè°ƒæ—¶é—´
-    function<void()> onWindowClosed;//æ·»åŠ ç•Œé¢å…³é—­ä¹‹åŽçš„å›žè°ƒäº‹ä»¶ï¼ˆç”¨äºŽå¤„ç†ç•Œé¢å®Œå…¨å…³é—­åŽæ‰è¿›è¡Œçš„äº‹åŠ¡ï¼‰
+    function<void()> onWindowIn;//Ìí¼Ó½çÃæ×Ô¶¯½øÈëÖ®ºóµÄ»Øµ÷Ê±¼ä
+    function<void()> onWindowClosed;//Ìí¼Ó½çÃæ¹Ø±ÕÖ®ºóµÄ»Øµ÷ÊÂ¼þ£¨ÓÃÓÚ´¦Àí½çÃæÍêÈ«¹Ø±Õºó²Å½øÐÐµÄÊÂÎñ£©
     
-    //é‡å†™å®ƒæ¥å¼€å¯çª—å£
+    //ÖØÐ´ËüÀ´¿ªÆô´°¿Ú
     virtual void showWindow();
-    //çª—å£å…³é—­æ—¶ä¼šè¢«è°ƒç”¨
+    //´°¿Ú¹Ø±ÕÊ±»á±»µ÷ÓÃ
     virtual void close() override;
-    //è®¾ç½®å¼¹å‡ºçª—å£æ˜¯å¦å¯ç”¨
+    //ÉèÖÃµ¯³ö´°¿ÚÊÇ·ñ¿ÉÓÃ
     void setTocuhEnable(bool enabled);
     
     virtual void update(float dt) override
@@ -88,7 +88,7 @@ public:
         IHWindow::update(dt);
     }
     
-    //å…³é—­çª—å£çš„æ—¶å€™è¯·è°ƒç”¨å®ƒ
+    //¹Ø±Õ´°¿ÚµÄÊ±ºòÇëµ÷ÓÃËü
     void closeWindow();
     
     HWindow();
@@ -97,31 +97,31 @@ public:
 protected:
     
     
-    //æ‰“å¼€ç•Œé¢æ—¶æ’­æ”¾çš„åŠ¨ç”»ï¼Œé‡å†™å®ƒæ¥è‡ªå®šä¹‰ï¼ŒåŠ¨ç”»æ’­æ”¾å®Œè°ƒç”¨onStartAnimOver,é‡å†™æ—¶éœ€è¦è‡ªå·±æ·»åŠ ç›‘å¬ï¼Œå¦åˆ™ç•Œé¢å°†æ— äº‹ä»¶ç›‘å¬
+    //´ò¿ª½çÃæÊ±²¥·ÅµÄ¶¯»­£¬ÖØÐ´ËüÀ´×Ô¶¨Òå£¬¶¯»­²¥·ÅÍêµ÷ÓÃonStartAnimOver,ÖØÐ´Ê±ÐèÒª×Ô¼ºÌí¼Ó¼àÌý£¬·ñÔò½çÃæ½«ÎÞÊÂ¼þ¼àÌý
     virtual void startAnim();
 
     virtual void onStartAnimOver();
     
-    //å…³é—­ç•Œé¢æ—¶æ’­æ”¾çš„åŠ¨ç”»ï¼Œé‡å†™å®ƒæ¥è‡ªå®šä¹‰ï¼ŒåŠ¨ç”»æ’­æ”¾å®Œå›žè°ƒonCloseAnimOver,é‡å†™æ—¶éœ€è¦è‡ªå·±æ·»åŠ ç›‘å¬ï¼Œå¦åˆ™æ— æ³•å…³é—­ç•Œé¢
+    //¹Ø±Õ½çÃæÊ±²¥·ÅµÄ¶¯»­£¬ÖØÐ´ËüÀ´×Ô¶¨Òå£¬¶¯»­²¥·ÅÍê»Øµ÷onCloseAnimOver,ÖØÐ´Ê±ÐèÒª×Ô¼ºÌí¼Ó¼àÌý£¬·ñÔòÎÞ·¨¹Ø±Õ½çÃæ
     virtual void endAnim();
     
-    //å…³é—­çª—å£åŠ¨ç”»ç»“æŸä¸€å®šè¦è°ƒç”¨è¿™ä¸ªæ–¹æ³•æ¥æ­£å¼å…³é—­çª—å£
+    //¹Ø±Õ´°¿Ú¶¯»­½áÊøÒ»¶¨Òªµ÷ÓÃÕâ¸ö·½·¨À´ÕýÊ½¹Ø±Õ´°¿Ú
     void onCloseAnimOver();
     
     virtual void onClose();
     
-    //è®¾ç½®ç•Œé¢è¿›å…¥çš„åŠ¨ç”»
+    //ÉèÖÃ½çÃæ½øÈëµÄ¶¯»­
     void setAnimType(WINDOW_ANIM anim_type){
         m_anim_type = anim_type;
     }
     
     
-    //çª—å£å¯¹è±¡
+    //´°¿Ú¶ÔÏó
     bool m_autoCenter;
     Widget* m_tips;
-    //çª—å£æ‰€åœ¨çš„Node
+    //´°¿ÚËùÔÚµÄNode
     Node* m_node;
-    //windowçš„å¸®åŠ©ç±»
+    //windowµÄ°ïÖúÀà
     HWindowsHelper* m_windowsHelper;
     
     

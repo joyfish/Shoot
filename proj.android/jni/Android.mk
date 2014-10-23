@@ -11,7 +11,7 @@ LOCAL_MODULE := cocos2dcpp_shared
 LOCAL_MODULE_FILENAME := libcocos2dcpp
 
 LOCAL_SRC_FILES := hellocpp/main.cpp \
-                   ../../Classes/AppDelegate.cpp \
+                  ../../Classes/AppDelegate.cpp \
 ../../Classes/ArmatureBase.cpp \
 ../../Classes/ArmatureFactory.cpp \
 ../../Classes/Bullet.cpp \
@@ -36,6 +36,7 @@ LOCAL_SRC_FILES := hellocpp/main.cpp \
 ../../Classes/Hero.cpp \
 ../../Classes/HeroFactory.cpp \
 ../../Classes/LineContainer.cpp \
+../../Classes/Location.cpp \
 ../../Classes/MainScene.cpp \
 ../../Classes/MenuScene.cpp \
 ../../Classes/NormalBomb.cpp \
@@ -44,14 +45,13 @@ LOCAL_SRC_FILES := hellocpp/main.cpp \
 ../../Classes/SplitBomb.cpp \
 ../../Classes/SplitBombFactory.cpp \
 ../../Classes/SplitBombModelManager.cpp \
-../../Classes/Window1.cpp \
-../../Classes/Window2.cpp \
-../../Classes/Window3.cpp \
 ../../Classes/Window_Ability.cpp \
 ../../Classes/Window_Battle.cpp \
+../../Classes/Window_Quit.cpp \
 ../../Classes/Window_Setting.cpp \
 ../../Classes/Window_Shop.cpp \
 ../../Classes/Window_Task.cpp \
+../../Classes/Window_Tips.cpp \
 ../../Classes/Window_Weapon.cpp \
 ../../Classes/mAStar.cpp \
 

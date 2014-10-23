@@ -2,3 +2,5 @@ ShootCCS/
 proj.wp8-xaml/
 proj.linux/
 bin/
+proj.android/
+proj.android/obj/
